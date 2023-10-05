@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            ComboBox cbxOperacion;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCalculadora));
             grpSistemaResultado = new GroupBox();
             rdbBinario = new RadioButton();
@@ -41,6 +42,8 @@
             btnOperar = new Button();
             btnLimpiar = new Button();
             btnCerrar = new Button();
+            lblHistorial = new Label();
+            lstbHistorial = new ListBox();
             cbxOperacion = new ComboBox();
             grpSistemaResultado.SuspendLayout();
             SuspendLayout();
@@ -95,26 +98,11 @@
             rdbDecimal.UseVisualStyleBackColor = true;
             rdbDecimal.CheckedChanged += RdbDecimal_CheckedChanged;
             // 
-            // txtPrimerOperador
-            // 
-            txtPrimerOperador.BackColor = SystemColors.ButtonFace;
-            txtPrimerOperador.BorderStyle = BorderStyle.FixedSingle;
-            txtPrimerOperador.Cursor = Cursors.Hand;
-            txtPrimerOperador.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            txtPrimerOperador.ForeColor = SystemColors.WindowText;
-            txtPrimerOperador.Location = new Point(58, 549);
-            txtPrimerOperador.Name = "txtPrimerOperador";
-            txtPrimerOperador.PlaceholderText = "0";
-            txtPrimerOperador.Size = new Size(344, 61);
-            txtPrimerOperador.TabIndex = 3;
-            txtPrimerOperador.TextAlign = HorizontalAlignment.Center;
-            txtPrimerOperador.TextChanged += TxtPrimerOperador_TextChanged;
-            // 
             // lblResultado
             // 
             lblResultado.AutoSize = true;
             lblResultado.Font = new Font("Segoe UI Semibold", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            lblResultado.Location = new Point(32, 76);
+            lblResultado.Location = new Point(32, 25);
             lblResultado.Name = "lblResultado";
             lblResultado.Size = new Size(380, 96);
             lblResultado.TabIndex = 1;
@@ -149,6 +137,21 @@
             lblSegundoOperador.Size = new Size(381, 54);
             lblSegundoOperador.TabIndex = 9;
             lblSegundoOperador.Text = "Segundo Operador:";
+            // 
+            // txtPrimerOperador
+            // 
+            txtPrimerOperador.BackColor = SystemColors.ButtonFace;
+            txtPrimerOperador.BorderStyle = BorderStyle.FixedSingle;
+            txtPrimerOperador.Cursor = Cursors.Hand;
+            txtPrimerOperador.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            txtPrimerOperador.ForeColor = SystemColors.WindowText;
+            txtPrimerOperador.Location = new Point(58, 549);
+            txtPrimerOperador.Name = "txtPrimerOperador";
+            txtPrimerOperador.PlaceholderText = "0";
+            txtPrimerOperador.Size = new Size(344, 61);
+            txtPrimerOperador.TabIndex = 3;
+            txtPrimerOperador.TextAlign = HorizontalAlignment.Center;
+            txtPrimerOperador.TextChanged += TxtPrimerOperador_TextChanged;
             // 
             // txtSegundoOperador
             // 
@@ -201,12 +204,34 @@
             btnCerrar.UseVisualStyleBackColor = true;
             btnCerrar.Click += BtnCerrar_Click;
             // 
+            // lblHistorial
+            // 
+            lblHistorial.AutoSize = true;
+            lblHistorial.Font = new Font("Segoe UI Semibold", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            lblHistorial.Location = new Point(1287, 25);
+            lblHistorial.Name = "lblHistorial";
+            lblHistorial.Size = new Size(332, 96);
+            lblHistorial.TabIndex = 10;
+            lblHistorial.Text = "Historial:";
+            // 
+            // lstbHistorial
+            // 
+            lstbHistorial.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            lstbHistorial.FormattingEnabled = true;
+            lstbHistorial.ItemHeight = 38;
+            lstbHistorial.Location = new Point(1287, 141);
+            lstbHistorial.Name = "lstbHistorial";
+            lstbHistorial.Size = new Size(629, 650);
+            lstbHistorial.TabIndex = 11;
+            // 
             // FrmCalculadora
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
-            ClientSize = new Size(1278, 844);
+            ClientSize = new Size(1952, 832);
+            Controls.Add(lstbHistorial);
+            Controls.Add(lblHistorial);
             Controls.Add(btnCerrar);
             Controls.Add(btnLimpiar);
             Controls.Add(btnOperar);
@@ -247,6 +272,8 @@
         private RadioButton rdbDecimal;
         private TextBox txtPrimerOperador;
         private TextBox txtSegundoOperador;
+        private Label lblHistorial;
+        private ListBox lstbHistorial;
 
         //private Numeracion primerOperando;
         //private Numeracion segundoOperando;

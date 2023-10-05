@@ -53,3 +53,7 @@ C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LA
 C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\MiCalculadora\obj\Debug\net6.0-windows\MiCalculadora.pdb
 C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\MiCalculadora\obj\Debug\net6.0-windows\MiCalculadora.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\MiCalculadora\obj\Debug\net6.0-windows\ref\MiCalculadora.dll
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\MiCalculadora\bin\Debug\net6.0-windows\Entidades.dll
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\MiCalculadora\bin\Debug\net6.0-windows\Entidades.pdb
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\MiCalculadora\obj\Debug\net6.0-windows\MiCalculadora.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\MiCalculadora\obj\Debug\net6.0-windows\MiCalculadora.csproj.CopyComplete
