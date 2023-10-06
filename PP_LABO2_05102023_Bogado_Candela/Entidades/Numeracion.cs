@@ -71,7 +71,7 @@ namespace Entidades
         /// </summary>
         /// <param name="valor"></param>
         /// <returns></returns>
-        protected bool EsNumeracionValida(string valor)
+        protected virtual bool EsNumeracionValida(string valor)
         {
             valor = valor.Trim();
             if (valor != null)

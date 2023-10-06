@@ -60,7 +60,7 @@ namespace Entidades
         /// </summary>
         /// <param name="valor"></param>
         /// <returns>Bool</returns>
-        protected bool EsNumeracionValida(string valor)
+        protected override bool EsNumeracionValida(string valor)
         {
             if (base.EsNumeracionValida(valor) && EsSistemaDecimalValido(valor))
             {
