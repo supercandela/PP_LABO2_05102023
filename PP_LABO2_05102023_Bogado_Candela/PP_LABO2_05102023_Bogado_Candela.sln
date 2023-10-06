@@ -5,9 +5,9 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PP_LABO2_05102023_Bogado_Candela", "PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela.csproj", "{D67FE30E-A456-49BA-8B11-43C33AAF0C5E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiCalculadora", "MiCalculadora\MiCalculadora.csproj", "{E7D30402-D0D9-4D20-8CC3-C4B882B48B3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "View", "MiCalculadora\View.csproj", "{E7D30402-D0D9-4D20-8CC3-C4B882B48B3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{E556447B-E06E-4EA2-B070-663A6C318E00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "Entidades\Entidades.csproj", "{E556447B-E06E-4EA2-B070-663A6C318E00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

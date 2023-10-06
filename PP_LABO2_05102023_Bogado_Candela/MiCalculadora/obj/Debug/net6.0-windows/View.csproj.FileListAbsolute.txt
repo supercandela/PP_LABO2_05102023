@@ -1,0 +1,7 @@
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\MiCalculadora\obj\Debug\net6.0-windows\MiCalculadora.FrmCalculadora.resources
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\MiCalculadora\obj\Debug\net6.0-windows\View.Properties.Resources.resources
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\MiCalculadora\obj\Debug\net6.0-windows\View.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\MiCalculadora\obj\Debug\net6.0-windows\View.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\MiCalculadora\obj\Debug\net6.0-windows\View.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\MiCalculadora\obj\Debug\net6.0-windows\View.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\MiCalculadora\obj\Debug\net6.0-windows\View.csproj.CoreCompileInputs.cache

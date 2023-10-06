@@ -178,7 +178,7 @@
             btnOperar.TabIndex = 6;
             btnOperar.Text = "Operar";
             btnOperar.UseVisualStyleBackColor = true;
-            btnOperar.Click += BtnOperar_Click;
+            btnOperar.Click += btnOperar_Click;
             // 
             // btnLimpiar
             // 
@@ -190,7 +190,7 @@
             btnLimpiar.TabIndex = 7;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
-            btnLimpiar.Click += BtnLimpiar_Click;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // btnCerrar
             // 
@@ -202,7 +202,7 @@
             btnCerrar.TabIndex = 8;
             btnCerrar.Text = "Cerrar";
             btnCerrar.UseVisualStyleBackColor = true;
-            btnCerrar.Click += BtnCerrar_Click;
+            btnCerrar.Click += btnCerrar_Click;
             // 
             // lblHistorial
             // 

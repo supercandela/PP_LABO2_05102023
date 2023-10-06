@@ -5,8 +5,11 @@ namespace MiCalculadora
 {
     public partial class FrmCalculadora : Form
     {
+        private Calculadora calculadora;
+
         public FrmCalculadora()
         {
+            this.calculadora = new Calculadora("Candela Bogado");
             InitializeComponent();
         }
 
@@ -22,39 +25,41 @@ namespace MiCalculadora
         private void FrmCalculadora_Load(object sender, EventArgs e)
         {
             //this.sistema = Numeracion.ESistema.Decimal;
+            this.cmbOperacion.DataSource = new char[] { '+', '-', '*', '/' };
         }
 
-        private void BtnCerrar_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        private void BtnLimpiar_Click(object sender, EventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            //this.txtPrimerOperador.Text = null;
-            //this.txtSegundoOperador.Text = null;
-            //this.lblResultado.Text = "Resultado: ";
-            //this.cbxOperacion.SelectedValue = null;
-            //this.rdbDecimal.Checked = true;
-            //this.rdbBinario.Checked = false;
-            //this.resultado = null;
+            this.calculadora.EliminarHistorialDeOperaciones();
+            this.txtPrimerOperando.Text = string.Empty;
+            this.txtSegundoOperando.Text = string.Empty;
+            this.lblResultado.Text = $"Resultado:";
+            this.MostrarHistorial();
         }
-        private void BtnOperar_Click(object sender, EventArgs e)
+        private void btnOperar_Click(object sender, EventArgs e)
         {
-            //this.calculadora = new Operacion(this.primerOperando, this.segundoOperando);
+            char operador;
+            calculadora.PrimerOperando =
+            this.GetOperador(this.txtPrimerOperando.Text);
+            calculadora.SegundoOperando =
+            this.GetOperador(this.txtSegundoOperando.Text);
+            operador = (char)this.cmbOperacion.SelectedItem;
+            this.calculadora.Calcular(operador);
+            this.calculadora.ActualizaHistorialDeOperaciones(operador)
+            ;
+            this.lblResultado.Text = $"Resultado: { calculadora.Resultado.Valor}";
+            this.MostrarHistorial();
+        }
 
-            //string value = this.cbxOperacion.Items[this.cbxOperacion.SelectedIndex].ToString();
-            //char tipoOperacion;
-            //if (value == null)
-            //{
-            //    tipoOperacion = '+';
-            //}
-            //else
-            //{
-            //    tipoOperacion = char.Parse(value.Trim());
-            //}
-
-            //this.resultado = calculadora.Operar(tipoOperacion);
-            //SetResultado();
+        private void MostrarHistorial()
+        {
+            this.lstHistorial.DataSource = null;
+            this.lstHistorial.DataSource =
+            this.calculadora.Operaciones;
         }
 
         private void TxtPrimerOperador_TextChanged(object sender, EventArgs e)
@@ -67,33 +72,20 @@ namespace MiCalculadora
         }
         private void RdbDecimal_CheckedChanged(object sender, EventArgs e)
         {
-            //this.sistema = Numeracion.ESistema.Decimal;
-            //SetResultado();
+            Calculadora.Sistema = ESistema.Decimal;
         }
         private void RdbBinario_CheckedChanged(object sender, EventArgs e)
         {
-            //this.sistema = Numeracion.ESistema.Binario;
-            //SetResultado();
+            Calculadora.Sistema = ESistema.Binario;
         }
-        //private void SetResultado()
-        //{
-        //    //if (string.IsNullOrEmpty(this.txtPrimerOperador.Text) || string.IsNullOrEmpty(this.txtSegundoOperador.Text))
-        //    //{
-        //    //    return;
-        //    //}
-        //    ////if (!Regex.IsMatch(this.txtPrimerOperador.Text, @"^-?\d+(\.\d+)?$") || !Regex.IsMatch(this.txtSegundoOperador.Text, @"^-?\d+(\.\d+)?$"))
-        //    ////{
-        //    ////    return;
-        //    ////}
-
-        //    //if (this.sistema == Numeracion.ESistema.Binario)
-        //    //{
-        //    //    this.lblResultado.Text = $"Resultado : {this.resultado.ConvertirA(Numeracion.ESistema.Binario)}";
-        //    //}
-        //    //else
-        //    //{
-        //    //    this.lblResultado.Text = $"Resultado : {this.resultado.Valor}";
-        //    //}
-        //}
+        
+        private Numeracion GetOperando()
+        {
+            if (Calculadora.Sistema == ESistema.Binario)
+            {
+                return new SistemaBinario(value);
+            }
+            return new SistemaDecimal(value);
+        }
     }
 }

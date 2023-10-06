@@ -70,10 +70,6 @@ namespace Entidades
                 this.sistema = value;
             }
         }
-        static Calculadora()
-        {
-            this.Sistema = ESistema.Decimal;
-        }
         public Calculadora()
         {
             this.operaciones = new List<string>();
@@ -81,7 +77,7 @@ namespace Entidades
         public Calculadora(string nombreAlumno)
             :this()
         {
-
+            this.nombreAlumno = nombreAlumno;
         }
         /// <summary>
         /// El método Calcular será el encargado de realizar las operaciones matemáticas entre 2 numeraciones. Aspectos a tener en cuenta: 
@@ -101,7 +97,7 @@ namespace Entidades
         /// <returns></returns>
         private Numeracion MapearResultado(double valor)
         {
-
+            return new Numeracion(Calculadora.Sistema);
         }
         /// <summary>
         /// El método ActualizaHistorialDeOperaciones generara un string concatenado con:

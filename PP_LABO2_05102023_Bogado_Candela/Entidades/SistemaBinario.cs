@@ -23,7 +23,10 @@ namespace Entidades
         /// <returns></returns>
         public Numeracion CambiarSistemaDeNumeracion(ESistema sistema)
         {
-
+            if (sistema == ESistema.Binario)
+            {
+                return this.BinarioADecimal();
+            }
         }
         /// <summary>
         /// Verifica que la cadena recibida no sea nula o con espacios vacíos y adicionalmente sea un sistema binario válido.
@@ -55,7 +58,28 @@ namespace Entidades
         /// <returns>SistemaDecimal</returns>
         private SistemaDecimal BinarioADecimal()
         {
+            if (this.ValorNumerico > 0 && EsNumeracionValida(this.valor))
+            {
+                int digito = 0;
+                const int DIVISOR = 10;
+                double valorDecimal = 0;
 
+                for (double i = this.ValorNumerico, j = 0; i > 0; i /= DIVISOR, j++)
+                {
+                    digito = (int)i % DIVISOR;
+                    if (digito != 1 && digito != 0)
+                    {
+                        return -1;
+                    }
+                    valorDecimal += digito * (int)Math.Pow(2, j);
+                }
+
+                return new SistemaDecimal(valorDecimal.ToString());
+            }
+            else
+            {
+                return new SistemaDecimal(base.msgError);
+            }
         }
         /// <summary>
         /// Realiza una conversión implícita de string a SistemaBinario.

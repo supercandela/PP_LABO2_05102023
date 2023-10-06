@@ -25,14 +25,13 @@ namespace Entidades
         {
             get
             {
-
+                return this.valor;
             }
-            
         }
         /// <summary>
         /// Inicializa el atributo de clase msgError con el valor por defecto.
         /// </summary>
-        static Numeracion()
+        private Numeracion()
         {
             msgError = "Numero Invalido";
         }
@@ -51,17 +50,22 @@ namespace Entidades
         /// <param name="valor"></param>
         private void InicializaValor(string valor)
         {
-
+            if (EsNumeracionValida(valor))
+            {
+                this.valor = valor;
+            }
+            else
+            {
+                this.valor = msgError;
+            }
         }
         /// <summary>
         /// El método CambiarSistemaDeNumeracion será público y deberá de ser implementado de forma obligatoria en sus clases derivadas.
         /// </summary>
         /// <param name="sistema"></param>
         /// <returns></returns>
-        public virtual Numeracion CambiarSistemaDeNumeracion(ESistema sistema)
-        {
+        public abstract Numeracion CambiarSistemaDeNumeracion(ESistema sistema);
 
-        }
         /// <summary>
         /// El método EsNumeracionValida, será protegido. En la clase base solo verificara que la cadena recibida no sea nula o con espacios en blanco.
         /// </summary>
@@ -69,7 +73,8 @@ namespace Entidades
         /// <returns></returns>
         protected bool EsNumeracionValida(string valor)
         {
-            if (valor != null && valor.Trim())
+            valor = valor.Trim();
+            if (valor != null)
             {
                 return true;
             }

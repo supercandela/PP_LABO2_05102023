@@ -24,7 +24,10 @@ namespace Entidades
         /// <returns></returns>
         public Numeracion CambiarSistemaDeNumeracion(ESistema sistema)
         {
-
+            if (sistema == ESistema.Decimal)
+            {
+                return this.DecimalABinario();
+            }
         }
         /// <summary>
         /// Verifica que el valor a convertir sea mayor que 0 (cero).
@@ -34,7 +37,26 @@ namespace Entidades
         /// <returns></returns>
         private SistemaBinario DecimalABinario()
         {
+            if (this.ValorNumerico > 0 && EsNumeracionValida(this.valor))
+            {
+                double binario = 0;
 
+                const int DIVISOR = 2;
+                double digito = 0;
+                int valor = Convert.ToInt32(this.ValorNumerico);
+
+                for (int i = valor % DIVISOR, j = 0; valor > 0; valor /= DIVISOR, i = valor % DIVISOR, j++)
+                {
+                    digito = i % DIVISOR;
+                    binario += digito * (double)Math.Pow(10, j);
+                }
+
+                return new SistemaBinario(binario.ToString());
+            }
+            else
+            {
+                return new SistemaBinario(base.msgError);
+            }
         }
         /// <summary>
         /// Verifica que la cadena recibida no sea nula o con espacios vacíos y adicionalmente sea un sistema decimal válido.
