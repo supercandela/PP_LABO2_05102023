@@ -64,11 +64,9 @@ namespace MiCalculadora
 
         private void TxtPrimerOperador_TextChanged(object sender, EventArgs e)
         {
-            //this.primerOperando = new Numeracion(this.txtPrimerOperador.Text, Numeracion.ESistema.Decimal);
         }
         private void TxtSegundoOperador_TextChanged(object sender, EventArgs e)
         {
-            //this.segundoOperando = new Numeracion(this.txtSegundoOperador.Text, Numeracion.ESistema.Decimal);
         }
         private void RdbDecimal_CheckedChanged(object sender, EventArgs e)
         {

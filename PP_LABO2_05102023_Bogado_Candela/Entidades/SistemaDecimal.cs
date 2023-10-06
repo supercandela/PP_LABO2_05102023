@@ -22,12 +22,9 @@ namespace Entidades
         /// </summary>
         /// <param name="sistema"></param>
         /// <returns></returns>
-        public Numeracion CambiarSistemaDeNumeracion(ESistema sistema)
+        public override Numeracion CambiarSistemaDeNumeracion(ESistema sistema)
         {
-            if (sistema == ESistema.Decimal)
-            {
-                return this.DecimalABinario();
-            }
+            return this.DecimalABinario();
         }
         /// <summary>
         /// Verifica que el valor a convertir sea mayor que 0 (cero).

@@ -21,12 +21,9 @@ namespace Entidades
         /// </summary>
         /// <param name="sistema"></param>
         /// <returns></returns>
-        public Numeracion CambiarSistemaDeNumeracion(ESistema sistema)
+        public override Numeracion CambiarSistemaDeNumeracion(ESistema sistema)
         {
-            if (sistema == ESistema.Binario)
-            {
-                return this.BinarioADecimal();
-            }
+            return this.BinarioADecimal();
         }
         /// <summary>
         /// Verifica que la cadena recibida no sea nula o con espacios vacíos y adicionalmente sea un sistema binario válido.
