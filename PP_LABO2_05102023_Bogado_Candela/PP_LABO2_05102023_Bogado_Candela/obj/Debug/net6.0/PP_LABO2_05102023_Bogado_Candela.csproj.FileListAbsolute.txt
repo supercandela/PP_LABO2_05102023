@@ -1,0 +1,14 @@
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela\bin\Debug\net6.0\PP_LABO2_05102023_Bogado_Candela.exe
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela\bin\Debug\net6.0\PP_LABO2_05102023_Bogado_Candela.deps.json
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela\bin\Debug\net6.0\PP_LABO2_05102023_Bogado_Candela.runtimeconfig.json
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela\bin\Debug\net6.0\PP_LABO2_05102023_Bogado_Candela.dll
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela\bin\Debug\net6.0\PP_LABO2_05102023_Bogado_Candela.pdb
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela\obj\Debug\net6.0\PP_LABO2_05102023_Bogado_Candela.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela\obj\Debug\net6.0\PP_LABO2_05102023_Bogado_Candela.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela\obj\Debug\net6.0\PP_LABO2_05102023_Bogado_Candela.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela\obj\Debug\net6.0\PP_LABO2_05102023_Bogado_Candela.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela\obj\Debug\net6.0\PP_LABO2_05102023_Bogado_Candela.dll
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela\obj\Debug\net6.0\refint\PP_LABO2_05102023_Bogado_Candela.dll
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela\obj\Debug\net6.0\PP_LABO2_05102023_Bogado_Candela.pdb
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela\obj\Debug\net6.0\PP_LABO2_05102023_Bogado_Candela.genruntimeconfig.cache
+C:\Users\Administrator\Desktop\X\Prog-Labo-2\repos\Labo2\PP_LABO2_05102023\PP_LABO2_05102023_Bogado_Candela\PP_LABO2_05102023_Bogado_Candela\obj\Debug\net6.0\ref\PP_LABO2_05102023_Bogado_Candela.dll

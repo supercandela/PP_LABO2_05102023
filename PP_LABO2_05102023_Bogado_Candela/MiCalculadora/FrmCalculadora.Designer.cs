@@ -28,51 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ComboBox cbxOperacion;
+            ComboBox cmbOperacion;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCalculadora));
-            grpSistemaResultado = new GroupBox();
+            grpSistema = new GroupBox();
             rdbBinario = new RadioButton();
             rdbDecimal = new RadioButton();
             lblResultado = new Label();
-            lblPrimerOperador = new Label();
+            lblPrimerOperando = new Label();
             lblOperacion = new Label();
-            lblSegundoOperador = new Label();
-            txtPrimerOperador = new TextBox();
-            txtSegundoOperador = new TextBox();
+            lblSegundoOperando = new Label();
+            txtPrimerOperando = new TextBox();
+            txtSegundoOperando = new TextBox();
             btnOperar = new Button();
             btnLimpiar = new Button();
             btnCerrar = new Button();
             lblHistorial = new Label();
-            lstbHistorial = new ListBox();
-            cbxOperacion = new ComboBox();
-            grpSistemaResultado.SuspendLayout();
+            lstHistorial = new ListBox();
+            cmbOperacion = new ComboBox();
+            grpSistema.SuspendLayout();
             SuspendLayout();
             // 
-            // cbxOperacion
+            // cmbOperacion
             // 
-            cbxOperacion.Cursor = Cursors.Hand;
-            cbxOperacion.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbxOperacion.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            cbxOperacion.FormattingEnabled = true;
-            cbxOperacion.Items.AddRange(new object[] { "    +", "    -", "    *", "    /" });
-            cbxOperacion.Location = new Point(575, 549);
-            cbxOperacion.Name = "cbxOperacion";
-            cbxOperacion.Size = new Size(138, 62);
-            cbxOperacion.TabIndex = 4;
+            cmbOperacion.Cursor = Cursors.Hand;
+            cmbOperacion.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbOperacion.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbOperacion.FormattingEnabled = true;
+            cmbOperacion.Items.AddRange(new object[] { "    +", "    -", "    *", "    /" });
+            cmbOperacion.Location = new Point(575, 549);
+            cmbOperacion.Name = "cmbOperacion";
+            cmbOperacion.Size = new Size(138, 62);
+            cmbOperacion.TabIndex = 4;
             // 
-            // grpSistemaResultado
+            // grpSistema
             // 
-            grpSistemaResultado.Controls.Add(rdbBinario);
-            grpSistemaResultado.Controls.Add(rdbDecimal);
-            grpSistemaResultado.Cursor = Cursors.Hand;
-            grpSistemaResultado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            grpSistemaResultado.ForeColor = SystemColors.WindowText;
-            grpSistemaResultado.Location = new Point(399, 251);
-            grpSistemaResultado.Name = "grpSistemaResultado";
-            grpSistemaResultado.Size = new Size(500, 150);
-            grpSistemaResultado.TabIndex = 2;
-            grpSistemaResultado.TabStop = false;
-            grpSistemaResultado.Text = "Representar resultado en:";
+            grpSistema.Controls.Add(rdbBinario);
+            grpSistema.Controls.Add(rdbDecimal);
+            grpSistema.Cursor = Cursors.Hand;
+            grpSistema.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            grpSistema.ForeColor = SystemColors.WindowText;
+            grpSistema.Location = new Point(399, 251);
+            grpSistema.Name = "grpSistema";
+            grpSistema.Size = new Size(500, 150);
+            grpSistema.TabIndex = 2;
+            grpSistema.TabStop = false;
+            grpSistema.Text = "Representar resultado en:";
             // 
             // rdbBinario
             // 
@@ -108,15 +108,15 @@
             lblResultado.TabIndex = 1;
             lblResultado.Text = "Resultado:";
             // 
-            // lblPrimerOperador
+            // lblPrimerOperando
             // 
-            lblPrimerOperador.AutoSize = true;
-            lblPrimerOperador.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            lblPrimerOperador.Location = new Point(63, 475);
-            lblPrimerOperador.Name = "lblPrimerOperador";
-            lblPrimerOperador.Size = new Size(339, 54);
-            lblPrimerOperador.TabIndex = 7;
-            lblPrimerOperador.Text = "Primer Operador:";
+            lblPrimerOperando.AutoSize = true;
+            lblPrimerOperando.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPrimerOperando.Location = new Point(63, 475);
+            lblPrimerOperando.Name = "lblPrimerOperando";
+            lblPrimerOperando.Size = new Size(339, 54);
+            lblPrimerOperando.TabIndex = 7;
+            lblPrimerOperando.Text = "Primer Operador:";
             // 
             // lblOperacion
             // 
@@ -128,45 +128,45 @@
             lblOperacion.TabIndex = 8;
             lblOperacion.Text = "Operación:";
             // 
-            // lblSegundoOperador
+            // lblSegundoOperando
             // 
-            lblSegundoOperador.AutoSize = true;
-            lblSegundoOperador.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            lblSegundoOperador.Location = new Point(869, 475);
-            lblSegundoOperador.Name = "lblSegundoOperador";
-            lblSegundoOperador.Size = new Size(381, 54);
-            lblSegundoOperador.TabIndex = 9;
-            lblSegundoOperador.Text = "Segundo Operador:";
+            lblSegundoOperando.AutoSize = true;
+            lblSegundoOperando.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSegundoOperando.Location = new Point(869, 475);
+            lblSegundoOperando.Name = "lblSegundoOperando";
+            lblSegundoOperando.Size = new Size(381, 54);
+            lblSegundoOperando.TabIndex = 9;
+            lblSegundoOperando.Text = "Segundo Operador:";
             // 
-            // txtPrimerOperador
+            // txtPrimerOperando
             // 
-            txtPrimerOperador.BackColor = SystemColors.ButtonFace;
-            txtPrimerOperador.BorderStyle = BorderStyle.FixedSingle;
-            txtPrimerOperador.Cursor = Cursors.Hand;
-            txtPrimerOperador.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            txtPrimerOperador.ForeColor = SystemColors.WindowText;
-            txtPrimerOperador.Location = new Point(58, 549);
-            txtPrimerOperador.Name = "txtPrimerOperador";
-            txtPrimerOperador.PlaceholderText = "0";
-            txtPrimerOperador.Size = new Size(344, 61);
-            txtPrimerOperador.TabIndex = 3;
-            txtPrimerOperador.TextAlign = HorizontalAlignment.Center;
-            txtPrimerOperador.TextChanged += TxtPrimerOperador_TextChanged;
+            txtPrimerOperando.BackColor = SystemColors.ButtonFace;
+            txtPrimerOperando.BorderStyle = BorderStyle.FixedSingle;
+            txtPrimerOperando.Cursor = Cursors.Hand;
+            txtPrimerOperando.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            txtPrimerOperando.ForeColor = SystemColors.WindowText;
+            txtPrimerOperando.Location = new Point(58, 549);
+            txtPrimerOperando.Name = "txtPrimerOperando";
+            txtPrimerOperando.PlaceholderText = "0";
+            txtPrimerOperando.Size = new Size(344, 61);
+            txtPrimerOperando.TabIndex = 3;
+            txtPrimerOperando.TextAlign = HorizontalAlignment.Center;
+            txtPrimerOperando.TextChanged += TxtPrimerOperador_TextChanged;
             // 
-            // txtSegundoOperador
+            // txtSegundoOperando
             // 
-            txtSegundoOperador.BackColor = SystemColors.ButtonFace;
-            txtSegundoOperador.BorderStyle = BorderStyle.FixedSingle;
-            txtSegundoOperador.Cursor = Cursors.Hand;
-            txtSegundoOperador.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            txtSegundoOperador.ForeColor = SystemColors.WindowText;
-            txtSegundoOperador.Location = new Point(882, 548);
-            txtSegundoOperador.Name = "txtSegundoOperador";
-            txtSegundoOperador.PlaceholderText = "0";
-            txtSegundoOperador.Size = new Size(344, 61);
-            txtSegundoOperador.TabIndex = 5;
-            txtSegundoOperador.TextAlign = HorizontalAlignment.Center;
-            txtSegundoOperador.TextChanged += TxtSegundoOperador_TextChanged;
+            txtSegundoOperando.BackColor = SystemColors.ButtonFace;
+            txtSegundoOperando.BorderStyle = BorderStyle.FixedSingle;
+            txtSegundoOperando.Cursor = Cursors.Hand;
+            txtSegundoOperando.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            txtSegundoOperando.ForeColor = SystemColors.WindowText;
+            txtSegundoOperando.Location = new Point(882, 548);
+            txtSegundoOperando.Name = "txtSegundoOperando";
+            txtSegundoOperando.PlaceholderText = "0";
+            txtSegundoOperando.Size = new Size(344, 61);
+            txtSegundoOperando.TabIndex = 5;
+            txtSegundoOperando.TextAlign = HorizontalAlignment.Center;
+            txtSegundoOperando.TextChanged += TxtSegundoOperador_TextChanged;
             // 
             // btnOperar
             // 
@@ -214,15 +214,15 @@
             lblHistorial.TabIndex = 10;
             lblHistorial.Text = "Historial:";
             // 
-            // lstbHistorial
+            // lstHistorial
             // 
-            lstbHistorial.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            lstbHistorial.FormattingEnabled = true;
-            lstbHistorial.ItemHeight = 38;
-            lstbHistorial.Location = new Point(1287, 141);
-            lstbHistorial.Name = "lstbHistorial";
-            lstbHistorial.Size = new Size(629, 650);
-            lstbHistorial.TabIndex = 11;
+            lstHistorial.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            lstHistorial.FormattingEnabled = true;
+            lstHistorial.ItemHeight = 38;
+            lstHistorial.Location = new Point(1287, 141);
+            lstHistorial.Name = "lstHistorial";
+            lstHistorial.Size = new Size(629, 650);
+            lstHistorial.TabIndex = 11;
             // 
             // FrmCalculadora
             // 
@@ -230,19 +230,19 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(1952, 832);
-            Controls.Add(lstbHistorial);
+            Controls.Add(lstHistorial);
             Controls.Add(lblHistorial);
             Controls.Add(btnCerrar);
             Controls.Add(btnLimpiar);
             Controls.Add(btnOperar);
-            Controls.Add(cbxOperacion);
-            Controls.Add(txtSegundoOperador);
-            Controls.Add(lblSegundoOperador);
+            Controls.Add(cmbOperacion);
+            Controls.Add(txtSegundoOperando);
+            Controls.Add(lblSegundoOperando);
             Controls.Add(lblOperacion);
-            Controls.Add(lblPrimerOperador);
+            Controls.Add(lblPrimerOperando);
             Controls.Add(lblResultado);
-            Controls.Add(txtPrimerOperador);
-            Controls.Add(grpSistemaResultado);
+            Controls.Add(txtPrimerOperando);
+            Controls.Add(grpSistema);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
@@ -252,8 +252,8 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora de Candela Bogado";
             FormClosing += FrmCalculadora_FormClosing;
-            grpSistemaResultado.ResumeLayout(false);
-            grpSistemaResultado.PerformLayout();
+            grpSistema.ResumeLayout(false);
+            grpSistema.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -262,23 +262,17 @@
         private Button btnCerrar;
         private Button btnLimpiar;
         private Button btnOperar;
-        private ComboBox cbxOperacion;
-        private GroupBox grpSistemaResultado;
+        private ComboBox cmbOperacion;
+        private GroupBox grpSistema;
         private Label lblOperacion;
-        private Label lblPrimerOperador;
+        private Label lblPrimerOperando;
         private Label lblResultado;
-        private Label lblSegundoOperador;
+        private Label lblSegundoOperando;
         private RadioButton rdbBinario;
         private RadioButton rdbDecimal;
-        private TextBox txtPrimerOperador;
-        private TextBox txtSegundoOperador;
+        private TextBox txtPrimerOperando;
+        private TextBox txtSegundoOperando;
         private Label lblHistorial;
-        private ListBox lstbHistorial;
-
-        //private Numeracion primerOperando;
-        //private Numeracion segundoOperando;
-        //private Numeracion resultado;
-        //private Numeracion.ESistema sistema;
-        //private Operacion calculadora;
+        private ListBox lstHistorial;
     }
 }

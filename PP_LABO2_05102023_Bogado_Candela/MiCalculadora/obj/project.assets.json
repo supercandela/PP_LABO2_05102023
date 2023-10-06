@@ -32,9 +32,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\X\\Prog-Labo-2\\repos\\Labo2\\PP_LABO2_05102023\\PP_LABO2_05102023_Bogado_Candela\\MiCalculadora\\MiCalculadora.csproj",
-      "projectName": "MiCalculadora",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\X\\Prog-Labo-2\\repos\\Labo2\\PP_LABO2_05102023\\PP_LABO2_05102023_Bogado_Candela\\MiCalculadora\\MiCalculadora.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\X\\Prog-Labo-2\\repos\\Labo2\\PP_LABO2_05102023\\PP_LABO2_05102023_Bogado_Candela\\MiCalculadora\\View.csproj",
+      "projectName": "View",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\X\\Prog-Labo-2\\repos\\Labo2\\PP_LABO2_05102023\\PP_LABO2_05102023_Bogado_Candela\\MiCalculadora\\View.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Administrator\\Desktop\\X\\Prog-Labo-2\\repos\\Labo2\\PP_LABO2_05102023\\PP_LABO2_05102023_Bogado_Candela\\MiCalculadora\\obj\\",
       "projectStyle": "PackageReference",
