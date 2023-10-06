@@ -25,7 +25,7 @@ namespace Entidades
         {
             get
             {
-                return this.valor;
+                
             }
         }
         /// <summary>

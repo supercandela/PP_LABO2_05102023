@@ -88,7 +88,7 @@ namespace Entidades
         /// </summary>
         public void Calcular()
         {
-
+            
         }
         /// <summary>
         /// El método MapeaResultado devolverá una Numeracion en SistemaDecimal o SistemaBinario, dependiendo del sistema de la Calculadora.
@@ -97,7 +97,7 @@ namespace Entidades
         /// <returns></returns>
         private Numeracion MapearResultado(double valor)
         {
-            return new Numeracion(Calculadora.Sistema);
+            return new Numeracion(valor);
         }
         /// <summary>
         /// El método ActualizaHistorialDeOperaciones generara un string concatenado con:
