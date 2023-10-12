@@ -49,7 +49,7 @@ namespace MiCalculadora
             this.calculadora.Calcular(operador);
             this.calculadora.ActualizaHistorialDeOperaciones(operador)
             ;
-            this.lblResultado.Text = $"Resultado: { calculadora.Resultado.Valor}";
+            this.lblResultado.Text = $"Resultado: {calculadora.Resultado.Valor}";
             this.MostrarHistorial();
         }
 
@@ -74,7 +74,7 @@ namespace MiCalculadora
         {
             Calculadora.Sistema = ESistema.Binario;
         }
-        
+
         private Numeracion GetOperador(string value)
         {
             if (Calculadora.Sistema == ESistema.Binario)

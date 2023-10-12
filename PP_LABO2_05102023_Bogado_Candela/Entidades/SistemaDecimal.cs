@@ -49,7 +49,7 @@ namespace Entidades
         private SistemaBinario DecimalABinario()
         {
             //Se queda con la parte entera del número y lo guarda en valor
-            int valor = Convert.ToInt32(this.ValorNumerico);
+            int valor = (int)this.ValorNumerico;
             if (valor > 0 && EsNumeracionValida(this.valor))
             {
                 double binario = 0;

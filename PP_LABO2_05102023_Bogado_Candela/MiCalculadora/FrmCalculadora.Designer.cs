@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ComboBox cmbOperacion;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCalculadora));
             grpSistema = new GroupBox();
             rdbBinario = new RadioButton();
@@ -47,18 +46,6 @@
             cmbOperacion = new ComboBox();
             grpSistema.SuspendLayout();
             SuspendLayout();
-            // 
-            // cmbOperacion
-            // 
-            cmbOperacion.Cursor = Cursors.Hand;
-            cmbOperacion.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbOperacion.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            cmbOperacion.FormattingEnabled = true;
-            cmbOperacion.Items.AddRange(new object[] { "    +", "    -", "    *", "    /" });
-            cmbOperacion.Location = new Point(575, 549);
-            cmbOperacion.Name = "cmbOperacion";
-            cmbOperacion.Size = new Size(138, 62);
-            cmbOperacion.TabIndex = 4;
             // 
             // grpSistema
             // 
@@ -216,13 +203,24 @@
             // 
             // lstHistorial
             // 
-            lstHistorial.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            lstHistorial.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             lstHistorial.FormattingEnabled = true;
-            lstHistorial.ItemHeight = 38;
+            lstHistorial.ItemHeight = 30;
             lstHistorial.Location = new Point(1287, 141);
             lstHistorial.Name = "lstHistorial";
-            lstHistorial.Size = new Size(629, 650);
+            lstHistorial.Size = new Size(629, 634);
             lstHistorial.TabIndex = 11;
+            // 
+            // cmbOperacion
+            // 
+            cmbOperacion.Cursor = Cursors.Hand;
+            cmbOperacion.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbOperacion.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbOperacion.FormattingEnabled = true;
+            cmbOperacion.Location = new Point(575, 549);
+            cmbOperacion.Name = "cmbOperacion";
+            cmbOperacion.Size = new Size(138, 62);
+            cmbOperacion.TabIndex = 4;
             // 
             // FrmCalculadora
             // 
@@ -252,6 +250,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora de Candela Bogado";
             FormClosing += FrmCalculadora_FormClosing;
+            Load += FrmCalculadora_Load;
             grpSistema.ResumeLayout(false);
             grpSistema.PerformLayout();
             ResumeLayout(false);
