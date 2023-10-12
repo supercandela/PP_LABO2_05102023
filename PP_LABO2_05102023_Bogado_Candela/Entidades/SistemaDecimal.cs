@@ -4,8 +4,17 @@ using System.Text.RegularExpressions;
 
 namespace Entidades
 {
-    internal class SistemaDecimal : Numeracion
+    public class SistemaDecimal : Numeracion
     {
+        /// <summary>
+        /// Constructor de clase.
+        /// </summary>
+        /// <param name="valor"></param>
+        public SistemaDecimal(string valor)
+            : base(valor)
+        {
+
+        }
         /// <summary>
         /// Retorna el valor de la instancia en sistema decimal.
         /// </summary>
@@ -13,8 +22,7 @@ namespace Entidades
         {
             get
             {
-                double.TryParse(base.valor, out double valorRetorno);
-                return valorRetorno;
+                return (double)this;
             }
         }
         /// <summary>
@@ -24,7 +32,13 @@ namespace Entidades
         /// <returns></returns>
         public override Numeracion CambiarSistemaDeNumeracion(ESistema sistema)
         {
-            return this.DecimalABinario();
+            //return this.DecimalABinario();
+            switch (sistema)
+            {
+                case ESistema.Binario:
+                    return this.DecimalABinario();
+            }
+            return this;
         }
         /// <summary>
         /// Verifica que el valor a convertir sea mayor que 0 (cero).
@@ -34,13 +48,14 @@ namespace Entidades
         /// <returns></returns>
         private SistemaBinario DecimalABinario()
         {
-            if (this.ValorNumerico > 0 && EsNumeracionValida(this.valor))
+            //Se queda con la parte entera del número y lo guarda en valor
+            int valor = Convert.ToInt32(this.ValorNumerico);
+            if (valor > 0 && EsNumeracionValida(this.valor))
             {
                 double binario = 0;
 
                 const int DIVISOR = 2;
                 double digito = 0;
-                int valor = Convert.ToInt32(this.ValorNumerico);
 
                 for (int i = valor % DIVISOR, j = 0; valor > 0; valor /= DIVISOR, i = valor % DIVISOR, j++)
                 {
@@ -52,7 +67,7 @@ namespace Entidades
             }
             else
             {
-                return new SistemaBinario(base.msgError);
+                return new SistemaBinario(Numeracion.msgError);
             }
         }
         /// <summary>
@@ -62,11 +77,13 @@ namespace Entidades
         /// <returns>Bool</returns>
         protected override bool EsNumeracionValida(string valor)
         {
-            if (base.EsNumeracionValida(valor) && EsSistemaDecimalValido(valor))
-            {
-                return true;
-            }
-            return false;
+            //if (base.EsNumeracionValida(valor) && EsSistemaDecimalValido(valor))
+            //{
+            //    return true;
+            //}
+            //return false;
+
+            return base.EsNumeracionValida(valor) && EsSistemaDecimalValido(valor);
         }
         /// <summary>
         /// Verifica que la cadena recibida pueda convertirse a tipo double.
@@ -75,11 +92,13 @@ namespace Entidades
         /// <returns></returns>
         private bool EsSistemaDecimalValido(string valor)
         {
-            if (double.TryParse(valor, out double nuevoValor))
-            {
-                return true;
-            }
-            return false;
+            //if (double.TryParse(valor, out double nuevoValor))
+            //{
+            //    return true;
+            //}
+            //return false;
+
+            return double.TryParse(valor, out double nuevoValor);
         }
         /// <summary>
         /// Realiza una conversión implícita de double a SistemaDecimal.
@@ -98,15 +117,6 @@ namespace Entidades
         public static implicit operator SistemaDecimal(string valor)
         {
             return new SistemaDecimal(valor);
-        }
-        /// <summary>
-        /// Constructor de clase.
-        /// </summary>
-        /// <param name="valor"></param>
-        public SistemaDecimal(string valor)
-            :base(valor)
-        {
-
         }
     }
 }

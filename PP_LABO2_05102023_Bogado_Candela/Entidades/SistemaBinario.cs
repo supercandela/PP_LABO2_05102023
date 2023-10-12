@@ -3,8 +3,19 @@ using System.Text.RegularExpressions;
 
 namespace Entidades
 {
-    internal class SistemaBinario : Numeracion
+    public class SistemaBinario : Numeracion
     {
+
+        /// <summary>
+        /// Constructor de clase.
+        /// </summary>
+        /// <param name="valor"></param>
+        public SistemaBinario(string valor)
+            : base(valor)
+        {
+
+        }
+
         /// <summary>
         /// Retorna el valor de la instancia en sistema decimal.
         /// </summary>
@@ -12,8 +23,7 @@ namespace Entidades
         {
             get
             {
-                double.TryParse(base.valor, out double valorRetorno);
-                return valorRetorno;
+                return (double)this.CambiarSistemaDeNumeracion(ESistema.Decimal);
             }
         }
         /// <summary>
@@ -23,7 +33,12 @@ namespace Entidades
         /// <returns></returns>
         public override Numeracion CambiarSistemaDeNumeracion(ESistema sistema)
         {
-            return this.BinarioADecimal();
+            switch (sistema)
+            {
+                case ESistema.Decimal:
+                    return this.BinarioADecimal();
+            }
+            return this;
         }
         /// <summary>
         /// Verifica que la cadena recibida no sea nula o con espacios vacíos y adicionalmente sea un sistema binario válido.
@@ -32,7 +47,7 @@ namespace Entidades
         /// <returns>Bool</returns>
         protected override bool EsNumeracionValida(string valor)
         {
-            if (base.EsNumeracionValida(valor) && EsSistemaBinarioValido(valor))
+            if (base.EsNumeracionValida(valor) && this.EsSistemaBinarioValido(valor))
             {
                 return true;
             }
@@ -43,7 +58,7 @@ namespace Entidades
         /// </summary>
         /// <param name="valor"></param>
         /// <returns>True si la cadena está compuesta sólo por '0' o '1'. False si la cadena tiene otros caracteres.</returns>
-        private static bool EsSistemaBinarioValido(string valor)
+        private bool EsSistemaBinarioValido(string valor)
         {
             return Regex.IsMatch(valor, "^[01]+$");
         }
@@ -55,28 +70,45 @@ namespace Entidades
         /// <returns>SistemaDecimal</returns>
         private SistemaDecimal BinarioADecimal()
         {
-            if (this.ValorNumerico > 0 && EsNumeracionValida(this.valor))
+            if(base.valor != Numeracion.msgError)
             {
-                int digito = 0;
-                const int DIVISOR = 10;
-                double valorDecimal = 0;
+                int potencia = base.valor.Length - 1;
+                int resultado = 0;
 
-                for (double i = this.ValorNumerico, j = 0; i > 0; i /= DIVISOR, j++)
+                foreach (char item in base.valor) 
                 {
-                    digito = (int)i % DIVISOR;
-                    if (digito != 1 && digito != 0)
+                    if (item == '1')
                     {
-                        return -1;
+                        resultado = resultado + (int)Math.Pow(2, potencia);
                     }
-                    valorDecimal += digito * (int)Math.Pow(2, j);
+                    potencia--;
                 }
+                return resultado;
+            }
+            return double.MinValue;
 
-                return new SistemaDecimal(valorDecimal.ToString());
-            }
-            else
-            {
-                return new SistemaDecimal(base.msgError);
-            }
+            //if (this.ValorNumerico > 0 && this.EsNumeracionValida(this.valor))
+            //{
+            //    int digito = 0;
+            //    const int DIVISOR = 10;
+            //    double valorDecimal = 0;
+
+            //    for (double i = this.ValorNumerico, j = 0; i > 0; i /= DIVISOR, j++)
+            //    {
+            //        digito = (int)i % DIVISOR;
+            //        if (digito != 1 && digito != 0)
+            //        {
+            //            return -1;
+            //        }
+            //        valorDecimal += digito * (int)Math.Pow(2, j);
+            //    }
+
+            //    return new SistemaDecimal(valorDecimal.ToString());
+            //}
+            //else
+            //{
+            //    return new SistemaDecimal(Numeracion.msgError);
+            //}
         }
         /// <summary>
         /// Realiza una conversión implícita de string a SistemaBinario.
@@ -86,15 +118,6 @@ namespace Entidades
         public static implicit operator SistemaBinario(string valor)
         {
             return new SistemaBinario(valor);
-        }
-        /// <summary>
-        /// Constructor de clase.
-        /// </summary>
-        /// <param name="valor"></param>
-        public SistemaBinario(string valor)
-            : base(valor)
-        {
-
         }
     }
 }

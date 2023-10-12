@@ -9,8 +9,8 @@ namespace MiCalculadora
 
         public FrmCalculadora()
         {
-            this.calculadora = new Calculadora("Candela Bogado");
             InitializeComponent();
+            this.calculadora = new Calculadora("Candela Bogado");
         }
 
         private void FrmCalculadora_FormClosing(object sender, FormClosingEventArgs e)
@@ -43,10 +43,8 @@ namespace MiCalculadora
         private void btnOperar_Click(object sender, EventArgs e)
         {
             char operador;
-            calculadora.PrimerOperando =
-            this.GetOperador(this.txtPrimerOperando.Text);
-            calculadora.SegundoOperando =
-            this.GetOperador(this.txtSegundoOperando.Text);
+            calculadora.PrimerOperando = this.GetOperador(this.txtPrimerOperando.Text);
+            calculadora.SegundoOperando = this.GetOperador(this.txtSegundoOperando.Text);
             operador = (char)this.cmbOperacion.SelectedItem;
             this.calculadora.Calcular(operador);
             this.calculadora.ActualizaHistorialDeOperaciones(operador)
@@ -77,7 +75,7 @@ namespace MiCalculadora
             Calculadora.Sistema = ESistema.Binario;
         }
         
-        private Numeracion GetOperando()
+        private Numeracion GetOperador(string value)
         {
             if (Calculadora.Sistema == ESistema.Binario)
             {

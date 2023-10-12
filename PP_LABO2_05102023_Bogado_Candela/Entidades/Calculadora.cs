@@ -10,7 +10,7 @@ namespace Entidades
         private Numeracion primerOperando;
         private Numeracion resultado;
         private Numeracion segundoOperando;
-        private ESistema sistema;
+        private static ESistema sistema;
 
         public string NombreAlumno
         {
@@ -59,7 +59,7 @@ namespace Entidades
                 this.segundoOperando = value;
             }
         }
-        public ESistema Sistema
+        public static ESistema Sistema
         {
             get
             {
@@ -67,8 +67,12 @@ namespace Entidades
             }
             set
             {
-                this.sistema = value;
+                Calculadora.sistema = value;
             }
+        }
+        static Calculadora()
+        {
+            Calculadora.sistema = ESistema.Decimal;
         }
         public Calculadora()
         {
@@ -88,16 +92,41 @@ namespace Entidades
         /// </summary>
         public void Calcular()
         {
-            
+            this.Calcular('+');
+        }
+        public void Calcular(char operador)
+        {
+            double resultado = double.MinValue;
+            if (this.primerOperando == this.segundoOperando)
+            {
+                switch (operador)
+                {
+                    case '-':
+                        resultado = this.primerOperando.ValorNumerico - this.segundoOperando.ValorNumerico;
+                        break;
+                    case '*':
+                        resultado = this.primerOperando.ValorNumerico * this.segundoOperando.ValorNumerico;
+                        break;
+                    case '/':
+                        resultado = this.primerOperando.ValorNumerico / this.segundoOperando.ValorNumerico;
+                        break;
+                    default:
+                        resultado = this.primerOperando.ValorNumerico + this.segundoOperando.ValorNumerico;
+                        break;
+                }
+            }
+            this.resultado = this.MapeaResultado(resultado);
         }
         /// <summary>
         /// El método MapeaResultado devolverá una Numeracion en SistemaDecimal o SistemaBinario, dependiendo del sistema de la Calculadora.
         /// </summary>
         /// <param name="valor"></param>
         /// <returns></returns>
-        private Numeracion MapearResultado(double valor)
+        private Numeracion MapeaResultado(double valor)
         {
-            return new Numeracion(valor);
+            //return Numeracion.CambiarSistemaDeNumeracion(Calculadora.Sistema);
+            Numeracion resultado = (SistemaDecimal)valor.ToString();
+            return resultado.CambiarSistemaDeNumeracion(Calculadora.Sistema);
         }
         /// <summary>
         /// El método ActualizaHistorialDeOperaciones generara un string concatenado con:
@@ -106,11 +135,12 @@ namespace Entidades
         /// iii.El operador.
         /// iv.Utilizar StringBuilder para lograr esto.
         /// </summary>
-        public void ActualizarHistorialDeOperaciones()
+        /// <param name="operador"></param>
+        public void ActualizaHistorialDeOperaciones(char operador)
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Sistema: {this.Sistema.ToString()}");
-            sb.AppendLine($"{this.primerOperando.ValorNumerico} + {this.segundoOperando.ValorNumerico} = {this.Resultado}");
+            sb.Append($"Sistema: {Calculadora.sistema} -> ");
+            sb.Append($"{this.primerOperando.Valor} {operador} {this.segundoOperando.Valor} = {this.Resultado.Valor}");
             this.operaciones.Add(sb.ToString());
         }
         /// <summary>
